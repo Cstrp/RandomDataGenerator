@@ -1,6 +1,6 @@
 import { Button, Form, InputNumber, Select, Slider, Typography } from 'antd';
-import { RandomDataFormProps } from './RandomDataFormProps.ts';
 import { getRandomNumber, selectOptions } from '../../../data';
+import { RandomDataFormProps } from './RandomDataFormProps.ts';
 
 export const RandomDataForm = ({
   errorProbability,

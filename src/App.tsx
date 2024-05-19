@@ -1,11 +1,11 @@
+import { faker } from '@faker-js/faker';
+import { CircularProgress } from '@mui/material';
+import { Divider, Table } from 'antd';
+import { Content } from 'antd/es/layout/layout';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { faker } from '@faker-js/faker';
-import { Divider, Table } from 'antd';
 import { cols, FakeData, generateError, generateFakeRecords } from './data';
 import { Csv, RandomDataForm } from './view/components';
-import { Content } from 'antd/es/layout/layout';
-import { CircularProgress } from '@mui/material';
 
 export const App = () => {
   const [region, setRegion] = useState<string>('pl');
@@ -34,7 +34,7 @@ export const App = () => {
         const newFakeData = generateFakeRecords(10, fakeData.length);
         setFakeData((prevFakeData) => [...prevFakeData, ...newFakeData]);
         setIsLoading(false);
-      }, 1000); // Simulating a delay for demonstration purposes
+      }, 1000);
     }
   };
 
